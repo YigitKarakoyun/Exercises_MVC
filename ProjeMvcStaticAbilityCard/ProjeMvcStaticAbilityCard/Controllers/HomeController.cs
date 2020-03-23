@@ -13,9 +13,9 @@ namespace ProjeMvcStaticAbilityCard.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Skill()
         {
-            ViewBag.Message = "Your application description page.";
+            
 
             return View();
         }
