@@ -1,0 +1,13 @@
+﻿@*@model List<SelectListItem>*@
+@*@Html.DropDownListFor(x => x.ID, (List<SelectListItem>)Model,new {@class = "form-control" }))*@
+              public ActionResult Index()
+        {
+            var temp = (from i in db.TBL_CITY.ToList()
+                        select new SelectListItem
+                        {
+                            Text = i.CITY,
+                            Value = i.ID.ToString()
+                        }
+                        ).ToList();
+            return View(temp);
+        }
